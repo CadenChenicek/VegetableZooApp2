@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">VegetableZooApp</string>
+    <string name="instructions">Howdy! My name is Clint the Carrot. Welcome to Vegetable Zoo!
+        The goal of the game is to unscramble the names of as many vegetables as possible in one minute.
+        The names of the vegetables will become increasingly longer as you go.
+        Are you ready to play?</string>
+</resources>

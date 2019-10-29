@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zoobg"
+    tools:context=".MainMenu">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="321dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="cursive"
+        android:onClick="clickInstruct"
+        android:text="Instructions"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="365dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vz_logo2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="41dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="cursive"
+        android:onClick="clickPlay"
+        android:text="Play"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="193dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="16dp"
+        android:rotation="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:srcCompat="@drawable/clery" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="177dp"
+        android:layout_height="361dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="16dp"
+        android:rotation="-10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/carrot" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="176dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tomato" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
