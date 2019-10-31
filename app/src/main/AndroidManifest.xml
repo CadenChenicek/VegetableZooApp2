@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LevelOneFinish"></activity>
+        <activity android:name=".GamePlayActivity2"></activity>
+        <activity android:name=".LevelOneFinish" />
         <activity android:name=".incorrectSplash" />
         <activity android:name=".correctSplash" />
         <activity android:name=".InstructActivity" />
