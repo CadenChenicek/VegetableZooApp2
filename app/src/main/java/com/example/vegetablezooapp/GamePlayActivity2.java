@@ -59,7 +59,7 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
         if (gameState == 1){
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_game_play);
+            setContentView(R.layout.activity_game_play2);
 
             char1 = (TextView) findViewById(R.id.letter1);
             char2 = (TextView) findViewById(R.id.letter2);
@@ -103,7 +103,7 @@ public class GamePlayActivity2 extends AppCompatActivity {
         }
         else if (gameState == 2){
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_game_play);
+            setContentView(R.layout.activity_game_play2);
 
             char1 = (TextView) findViewById(R.id.letter1);
             char2 = (TextView) findViewById(R.id.letter2);
@@ -135,7 +135,7 @@ public class GamePlayActivity2 extends AppCompatActivity {
         }
         else if (gameState == 3){
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_game_play);
+            setContentView(R.layout.activity_game_play2);
 
             char1 = (TextView) findViewById(R.id.letter1);
             char2 = (TextView) findViewById(R.id.letter2);
