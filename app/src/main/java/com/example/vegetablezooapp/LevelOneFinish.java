@@ -29,7 +29,7 @@ public class LevelOneFinish extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String veg;
-        final int gameState = intent.getIntExtra(STATE, 0);
+        final int gameState = 1;
         final ArrayList<String> vegetables = new ArrayList<String>();;
         vegetables.add("CARROT");
         vegetables.add("RADISH");

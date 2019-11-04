@@ -40,7 +40,7 @@ public class GamePlayActivity2 extends AppCompatActivity {
     private TextView char1, char2, char3, char4, char5, char6;
     private TextView space1, space2, space3, space4, space5, space6;
     private TextView scoreCount;
-    private Character[] vegLetterArray = new Character[4];
+    private Character[] vegLetterArray = new Character[6];
 
 
     private static final long START_TIME_IN_MILLIS = 61000;
@@ -60,6 +60,8 @@ public class GamePlayActivity2 extends AppCompatActivity {
         if (gameState == 1){
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_game_play2);
+
+
 
             char1 = (TextView) findViewById(R.id.letter1);
             char2 = (TextView) findViewById(R.id.letter2);
@@ -92,13 +94,11 @@ public class GamePlayActivity2 extends AppCompatActivity {
             scoreCount = (TextView) findViewById(R.id.scoreText);
             scoreCount.setText("" + score);
 
-
-
-
             countdownText = findViewById(R.id.countdownText);
-            startTimer();
+            //startTimer();
+            countdownText.setText(veg);
 
-            assignLetters();
+            //assignLetters();
 
         }
         else if (gameState == 2){
@@ -199,6 +199,8 @@ public class GamePlayActivity2 extends AppCompatActivity {
         Character letter2 = veg.charAt(1);
         Character letter3 = veg.charAt(2);
         Character letter4 = veg.charAt(3);
+        Character letter5 = veg.charAt(4);
+        Character letter6 = veg.charAt(5);
 
         int random = new Random().nextInt(vegetables.size());
         veg = vegetables.get(random);
@@ -273,7 +275,7 @@ public class GamePlayActivity2 extends AppCompatActivity {
     }
 
     public void assignLetters(){
-        int len = VEGETABLE.length();
+        int len = veg.length();
         for (int i = 0; i <= len; i++){
             vegLetterArray[i] = veg.charAt(i);
         }
@@ -283,6 +285,8 @@ public class GamePlayActivity2 extends AppCompatActivity {
         char2.setText(vegLetterArray[1].toString());
         char3.setText(vegLetterArray[2].toString());
         char4.setText(vegLetterArray[3].toString());
+        char5.setText(vegLetterArray[5].toString());
+        char6.setText(vegLetterArray[6].toString());
 
     }
 
@@ -298,7 +302,6 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
         return array;
     }
-
 
     View.OnLongClickListener longclickListener = new View.OnLongClickListener(){
         @Override
