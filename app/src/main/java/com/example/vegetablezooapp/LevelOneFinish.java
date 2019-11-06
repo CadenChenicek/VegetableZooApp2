@@ -17,6 +17,7 @@ public class LevelOneFinish extends AppCompatActivity {
     public static final String STATE = "game";
     public static final String VEG_LIST = "list";
     public static final String SCORE = "score";
+    public static final String LEVEL = "level";
     private static int SPLASH_SCREEN_INT = 6000;
     private static TextView scoreCount;
 
@@ -30,6 +31,7 @@ public class LevelOneFinish extends AppCompatActivity {
         Intent intent = getIntent();
         final String veg;
         final int gameState = 1;
+        int level = intent.getIntExtra(LEVEL, 0) + 1;
         final ArrayList<String> vegetables = new ArrayList<String>();;
         vegetables.add("CARROT");
         vegetables.add("RADISH");
@@ -49,10 +51,11 @@ public class LevelOneFinish extends AppCompatActivity {
 
             public void run(){
                 Intent intent2 = new Intent(LevelOneFinish.this, GamePlayActivity2.class);
-                intent2.putExtra(GamePlayActivity.VEGETABLE, veg);
-                intent2.putExtra(GamePlayActivity.STATE, gameState);
-                intent2.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent2.putExtra(GamePlayActivity.SCORE, score);
+                intent2.putExtra(LEVEL, 0);
+                intent2.putExtra(GamePlayActivity2.VEGETABLE, veg);
+                intent2.putExtra(GamePlayActivity2.STATE, gameState);
+                intent2.putExtra(GamePlayActivity2.VEG_LIST, vegetables);
+                intent2.putExtra(GamePlayActivity2.SCORE, score);
                 startActivity(intent2);
             }
         },SPLASH_SCREEN_INT);

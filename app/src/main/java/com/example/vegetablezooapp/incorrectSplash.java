@@ -18,6 +18,7 @@ public class incorrectSplash extends AppCompatActivity {
     public static final String STATE = "game";
     public static final String VEG_LIST = "list";
     public static final String SCORE = "score";
+    public static final String LEVEL = "level";
     private static int SPLASH_SCREEN_INT = 3000;
     private TextView scoreCount;
 
@@ -30,6 +31,7 @@ public class incorrectSplash extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String veg = intent.getStringExtra(VEGETABLE);
+        final int level = intent.getIntExtra(LEVEL, 0);
         final int gameState = intent.getIntExtra(STATE, 0);
         final ArrayList<String> vegetables = intent.getStringArrayListExtra(VEG_LIST);
         final int score = intent.getIntExtra(SCORE, 0);

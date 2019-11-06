@@ -29,8 +29,10 @@ public class GamePlayActivity2 extends AppCompatActivity {
     public static final String STATE = "game";
     public static final String VEG_LIST = "list";
     public static final String SCORE = "score";
+    public static final String LEVEL = "level";
     private ArrayList<String> vegetables = new ArrayList<String>();
 
+    private int level;
     private int gameState;
     private int score;
     private String scoreString;
@@ -60,7 +62,6 @@ public class GamePlayActivity2 extends AppCompatActivity {
         if (gameState == 1){
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_game_play2);
-
 
 
             char1 = (TextView) findViewById(R.id.letter1);
@@ -95,10 +96,9 @@ public class GamePlayActivity2 extends AppCompatActivity {
             scoreCount.setText("" + score);
 
             countdownText = findViewById(R.id.countdownText);
-            //startTimer();
-            countdownText.setText(veg);
+            startTimer();
 
-            //assignLetters();
+            assignLetters();
 
         }
         else if (gameState == 2){
@@ -275,7 +275,7 @@ public class GamePlayActivity2 extends AppCompatActivity {
     }
 
     public void assignLetters(){
-        int len = veg.length();
+        int len = veg.length() - 1;
         for (int i = 0; i <= len; i++){
             vegLetterArray[i] = veg.charAt(i);
         }
@@ -285,8 +285,8 @@ public class GamePlayActivity2 extends AppCompatActivity {
         char2.setText(vegLetterArray[1].toString());
         char3.setText(vegLetterArray[2].toString());
         char4.setText(vegLetterArray[3].toString());
-        char5.setText(vegLetterArray[5].toString());
-        char6.setText(vegLetterArray[6].toString());
+        char5.setText(vegLetterArray[4].toString());
+        char6.setText(vegLetterArray[5].toString());
 
     }
 
@@ -387,6 +387,12 @@ public class GamePlayActivity2 extends AppCompatActivity {
                     else if (view.getId() == R.id.letter4){
                         space1.setText(char4.getText());
                     }
+                    else if (view.getId() == R.id.letter5){
+                        space1.setText(char5.getText());
+                    }
+                    else if (view.getId() == R.id.letter6){
+                        space1.setText(char6.getText());
+                    }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
@@ -419,6 +425,12 @@ public class GamePlayActivity2 extends AppCompatActivity {
                     else if (view.getId() == R.id.letter4){
                         space2.setText(char4.getText());
                     }
+                    else if (view.getId() == R.id.letter5){
+                        space2.setText(char5.getText());
+                    }
+                    else if (view.getId() == R.id.letter6){
+                        space2.setText(char6.getText());
+                    }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
@@ -449,6 +461,12 @@ public class GamePlayActivity2 extends AppCompatActivity {
                     }
                     else if (view.getId() == R.id.letter4){
                         space3.setText(char4.getText());
+                    }
+                    else if (view.getId() == R.id.letter5){
+                        space3.setText(char5.getText());
+                    }
+                    else if (view.getId() == R.id.letter6){
+                        space3.setText(char6.getText());
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -481,6 +499,12 @@ public class GamePlayActivity2 extends AppCompatActivity {
                     else if (view.getId() == R.id.letter4){
                         space4.setText(char4.getText());
                     }
+                    else if (view.getId() == R.id.letter5){
+                        space4.setText(char5.getText());
+                    }
+                    else if (view.getId() == R.id.letter6){
+                        space4.setText(char6.getText());
+                    }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
                     break;
@@ -501,16 +525,22 @@ public class GamePlayActivity2 extends AppCompatActivity {
                     final View view = (View) event.getLocalState();
 
                     if (view.getId() == R.id.letter1){
-                        space4.setText(char1.getText());
+                        space5.setText(char1.getText());
                     }
                     else if (view.getId() == R.id.letter2){
-                        space4.setText(char2.getText());
+                        space5.setText(char2.getText());
                     }
-                    else if (view.getId() == R.id.letter3){
-                        space4.setText(char3.getText());
+                    else if (view.getId() == R.id.letter3) {
+                        space5.setText(char3.getText());
                     }
                     else if (view.getId() == R.id.letter4){
-                        space4.setText(char4.getText());
+                        space5.setText(char4.getText());
+                    }
+                    else if (view.getId() == R.id.letter5){
+                        space5.setText(char5.getText());
+                    }
+                    else if (view.getId() == R.id.letter6){
+                        space5.setText(char6.getText());
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -532,16 +562,22 @@ public class GamePlayActivity2 extends AppCompatActivity {
                     final View view = (View) event.getLocalState();
 
                     if (view.getId() == R.id.letter1){
-                        space4.setText(char1.getText());
+                        space6.setText(char1.getText());
                     }
                     else if (view.getId() == R.id.letter2){
-                        space4.setText(char2.getText());
+                        space6.setText(char2.getText());
                     }
                     else if (view.getId() == R.id.letter3){
-                        space4.setText(char3.getText());
+                        space6.setText(char3.getText());
                     }
                     else if (view.getId() == R.id.letter4){
-                        space4.setText(char4.getText());
+                        space6.setText(char4.getText());
+                    }
+                    else if (view.getId() == R.id.letter5){
+                        space6.setText(char5.getText());
+                    }
+                    else if (view.getId() == R.id.letter6){
+                        space6.setText(char6.getText());
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
