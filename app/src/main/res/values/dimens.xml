@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lvl1space">80dp</dimen>
+    <dimen name="lvl2space">50dp</dimen>
+</resources>

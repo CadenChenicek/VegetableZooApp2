@@ -7,7 +7,7 @@
     tools:context=".TitleSplashScreen">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/splashTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/vz_logo" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/loadingBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="177dp"
         android:layout_height="49dp"
@@ -34,6 +34,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/splashTitle"
         android:progressTint="#f57a00"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

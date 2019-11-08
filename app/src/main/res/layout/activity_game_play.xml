@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/zoobg"
     tools:context=".GamePlayActivity">
 
     <TextView
@@ -12,33 +13,34 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="291dp"
         android:layout_marginBottom="110dp"
+        android:fontFamily="sans-serif"
         android:gravity="center"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="10:00" />
 
     <TextView
         android:id="@+id/label"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="Score:"
+        android:text="@string/score"
         android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/scoreText"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/scoreText"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="28dp"
+        android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="0"
         android:textSize="36sp"
@@ -54,7 +56,7 @@
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/countdownText" >
+        app:layout_constraintTop_toBottomOf="@+id/countdownText">
 
         <TableRow
             android:layout_width="match_parent"
@@ -72,10 +74,10 @@
 
                 <TextView
                     android:id="@+id/letterSpace1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#2196F3"
+                    android:background="@drawable/emptyspace"
                     android:gravity="center"
                     android:textSize="36sp" />
 
@@ -86,10 +88,10 @@
 
                 <TextView
                     android:id="@+id/letterSpace2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#2196F3"
+                    android:background="@drawable/emptyspace"
                     android:gravity="center"
                     android:textSize="36sp" />
 
@@ -100,10 +102,10 @@
 
                 <TextView
                     android:id="@+id/letterSpace3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#2196F3"
+                    android:background="@drawable/emptyspace"
                     android:gravity="center"
                     android:textSize="36sp" />
 
@@ -114,10 +116,10 @@
 
                 <TextView
                     android:id="@+id/letterSpace4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#2196F3"
+                    android:background="@drawable/emptyspace"
                     android:gravity="center"
                     android:textSize="36sp" />
 
@@ -153,10 +155,10 @@
 
                 <TextView
                     android:id="@+id/letter1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#F44336"
+                    android:background="@drawable/blockbg"
                     android:gravity="center"
                     android:text="A"
                     android:textSize="36sp" />
@@ -168,10 +170,10 @@
 
                 <TextView
                     android:id="@+id/letter2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#F44336"
+                    android:background="@drawable/blockbg"
                     android:gravity="center"
                     android:text="B"
                     android:textSize="36sp" />
@@ -183,10 +185,10 @@
 
                 <TextView
                     android:id="@+id/letter3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#F44336"
+                    android:background="@drawable/blockbg"
                     android:gravity="center"
                     android:text="C"
                     android:textSize="36sp" />
@@ -198,10 +200,10 @@
 
                 <TextView
                     android:id="@+id/letter4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/lvl1space"
+                    android:layout_height="@dimen/lvl1space"
                     android:layout_weight="1"
-                    android:background="#F44336"
+                    android:background="@drawable/blockbg"
                     android:gravity="center"
                     android:text="D"
                     android:textSize="36sp" />
@@ -217,10 +219,13 @@
         android:layout_width="119dp"
         android:layout_height="63dp"
         android:layout_marginStart="146dp"
-        android:layout_marginTop="99dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="146dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="serif-monospace"
         android:onClick="checkFinished"
-        android:text="DONE"
+        android:text="@string/done"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />

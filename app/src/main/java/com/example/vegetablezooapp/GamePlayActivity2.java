@@ -400,21 +400,27 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
                     if (view.getId() == R.id.letter1){
                         space1.setText(char1.getText());
+                        space1.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter2){
                         space1.setText(char2.getText());
+                        space1.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter3){
                         space1.setText(char3.getText());
+                        space1.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter4){
                         space1.setText(char4.getText());
+                        space1.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter5){
                         space1.setText(char5.getText());
+                        space1.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter6){
                         space1.setText(char6.getText());
+                        space1.setBackgroundResource(R.drawable.blockbg);
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -438,21 +444,27 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
                     if (view.getId() == R.id.letter1){
                         space2.setText(char1.getText());
+                        space2.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter2){
                         space2.setText(char2.getText());
+                        space2.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter3){
                         space2.setText(char3.getText());
+                        space2.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter4){
                         space2.setText(char4.getText());
+                        space2.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter5){
                         space2.setText(char5.getText());
+                        space2.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter6){
                         space2.setText(char6.getText());
+                        space2.setBackgroundResource(R.drawable.blockbg);
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -475,21 +487,27 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
                     if (view.getId() == R.id.letter1){
                         space3.setText(char1.getText());
+                        space3.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter2){
                         space3.setText(char2.getText());
+                        space3.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter3){
                         space3.setText(char3.getText());
+                        space3.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter4){
                         space3.setText(char4.getText());
+                        space3.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter5){
                         space3.setText(char5.getText());
+                        space3.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter6){
                         space3.setText(char6.getText());
+                        space3.setBackgroundResource(R.drawable.blockbg);
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -512,21 +530,27 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
                     if (view.getId() == R.id.letter1){
                         space4.setText(char1.getText());
+                        space4.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter2){
                         space4.setText(char2.getText());
+                        space4.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter3){
                         space4.setText(char3.getText());
+                        space4.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter4){
                         space4.setText(char4.getText());
+                        space4.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter5){
                         space4.setText(char5.getText());
+                        space4.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter6){
                         space4.setText(char6.getText());
+                        space4.setBackgroundResource(R.drawable.blockbg);
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -549,21 +573,27 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
                     if (view.getId() == R.id.letter1){
                         space5.setText(char1.getText());
+                        space5.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter2){
                         space5.setText(char2.getText());
+                        space5.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter3) {
                         space5.setText(char3.getText());
+                        space5.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter4){
                         space5.setText(char4.getText());
+                        space5.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter5){
                         space5.setText(char5.getText());
+                        space5.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter6){
                         space5.setText(char6.getText());
+                        space5.setBackgroundResource(R.drawable.blockbg);
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -586,21 +616,27 @@ public class GamePlayActivity2 extends AppCompatActivity {
 
                     if (view.getId() == R.id.letter1){
                         space6.setText(char1.getText());
+                        space6.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter2){
                         space6.setText(char2.getText());
+                        space6.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter3){
                         space6.setText(char3.getText());
+                        space6.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter4){
                         space6.setText(char4.getText());
+                        space6.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter5){
                         space6.setText(char5.getText());
+                        space6.setBackgroundResource(R.drawable.blockbg);
                     }
                     else if (view.getId() == R.id.letter6){
                         space6.setText(char6.getText());
+                        space6.setBackgroundResource(R.drawable.blockbg);
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:

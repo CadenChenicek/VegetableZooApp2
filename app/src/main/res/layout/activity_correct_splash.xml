@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
+    android:background="@drawable/zoobg"
     tools:context=".correctSplash">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="173dp"
         android:layout_height="50dp"
         android:layout_marginStart="134dp"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="134dp"
         android:fontFamily="casual"
         android:text="CORRECT"
@@ -27,7 +27,7 @@
         android:layout_width="131dp"
         android:layout_height="48dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="310dp"
         android:fontFamily="casual"
         android:text="SCORE:"
         android:textSize="36sp"
@@ -39,7 +39,7 @@
         android:id="@+id/scoreText"
         android:layout_width="131dp"
         android:layout_height="48dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="310dp"
         android:layout_marginEnd="72dp"
         android:fontFamily="casual"
         android:gravity="center"

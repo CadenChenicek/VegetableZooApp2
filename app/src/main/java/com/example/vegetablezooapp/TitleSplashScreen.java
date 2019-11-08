@@ -30,7 +30,7 @@ public class TitleSplashScreen extends AppCompatActivity {
             }
         },SPLASH_SCREEN_INT);
 
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        mProgressBar = (ProgressBar) findViewById(R.id.loadingBar);
 
         new Thread(new Runnable() {
             @Override
