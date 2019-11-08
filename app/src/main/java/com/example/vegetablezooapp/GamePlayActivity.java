@@ -29,10 +29,12 @@ public class GamePlayActivity extends AppCompatActivity {
     public static final String STATE = "game";
     public static final String VEG_LIST = "list";
     public static final String SCORE = "score";
+    public static final String LEVEL = "level";
     private ArrayList<String> vegetables = new ArrayList<String>();
 
     private int gameState;
     private int score;
+    private int level;
     private String scoreString;
     private String veg;
 
@@ -56,6 +58,7 @@ public class GamePlayActivity extends AppCompatActivity {
         gameState = intent.getIntExtra(STATE,0);
         vegetables = intent.getStringArrayListExtra(VEG_LIST);
         score = intent.getIntExtra(SCORE, 0);
+        level = intent.getIntExtra(LEVEL, 0);
 
         if (gameState == 1){
             super.onCreate(savedInstanceState);
@@ -83,9 +86,6 @@ public class GamePlayActivity extends AppCompatActivity {
 
             scoreCount = (TextView) findViewById(R.id.scoreText);
             scoreCount.setText("" + score);
-
-
-
 
             countdownText = findViewById(R.id.countdownText);
             startTimer();
@@ -206,8 +206,9 @@ public class GamePlayActivity extends AppCompatActivity {
                 Intent intent = new Intent(GamePlayActivity.this, correctSplash.class);
                 intent.putExtra(correctSplash.VEGETABLE, veg);
                 intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(correctSplash.VEG_LIST, vegetables);
+                intent.putExtra(correctSplash.SCORE, score);
+                intent.putExtra(correctSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
@@ -216,8 +217,9 @@ public class GamePlayActivity extends AppCompatActivity {
                 Intent intent = new Intent(GamePlayActivity.this, correctSplash.class);
                 intent.putExtra(correctSplash.VEGETABLE, veg);
                 intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(correctSplash.VEG_LIST, vegetables);
+                intent.putExtra(correctSplash.SCORE, score);
+                intent.putExtra(correctSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
@@ -227,6 +229,7 @@ public class GamePlayActivity extends AppCompatActivity {
                 intent.putExtra(LevelOneFinish.STATE, gameState);
                 intent.putExtra(LevelOneFinish.VEG_LIST, vegetables);
                 intent.putExtra(LevelOneFinish.SCORE, score);
+                intent.putExtra(LevelOneFinish.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
@@ -237,8 +240,9 @@ public class GamePlayActivity extends AppCompatActivity {
                 Intent intent = new Intent(GamePlayActivity.this, incorrectSplash.class);
                 intent.putExtra(correctSplash.VEGETABLE, veg);
                 intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(correctSplash.VEG_LIST, vegetables);
+                intent.putExtra(correctSplash.SCORE, score);
+                intent.putExtra(correctSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
@@ -247,8 +251,9 @@ public class GamePlayActivity extends AppCompatActivity {
                 Intent intent = new Intent(GamePlayActivity.this, incorrectSplash.class);
                 intent.putExtra(correctSplash.VEGETABLE, veg);
                 intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(correctSplash.VEG_LIST, vegetables);
+                intent.putExtra(correctSplash.SCORE, score);
+                intent.putExtra(correctSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
@@ -258,6 +263,7 @@ public class GamePlayActivity extends AppCompatActivity {
                 intent.putExtra(LevelOneFinish.STATE, gameState);
                 intent.putExtra(LevelOneFinish.VEG_LIST, vegetables);
                 intent.putExtra(LevelOneFinish.SCORE, score);
+                intent.putExtra(LevelOneFinish.LEVEL, level);
                 startActivity(intent);
                 finish();
             }

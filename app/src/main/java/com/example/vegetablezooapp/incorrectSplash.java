@@ -42,12 +42,24 @@ public class incorrectSplash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
 
             public void run(){
-                Intent intent2 = new Intent(incorrectSplash.this, GamePlayActivity.class);
-                intent2.putExtra(GamePlayActivity.VEGETABLE, veg);
-                intent2.putExtra(GamePlayActivity.STATE, gameState);
-                intent2.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent2.putExtra(GamePlayActivity.SCORE, score);
-                startActivity(intent2);
+                if (level == 1) {
+                    Intent intent2 = new Intent(incorrectSplash.this, GamePlayActivity.class);
+                    intent2.putExtra(GamePlayActivity.LEVEL, level);
+                    intent2.putExtra(GamePlayActivity.VEGETABLE, veg);
+                    intent2.putExtra(GamePlayActivity.STATE, gameState);
+                    intent2.putExtra(GamePlayActivity.VEG_LIST, vegetables);
+                    intent2.putExtra(GamePlayActivity.SCORE, score);
+                    startActivity(intent2);
+                }
+                else if (level == 2){
+                    Intent intent2 = new Intent(incorrectSplash.this, GamePlayActivity2.class);
+                    intent2.putExtra(GamePlayActivity2.LEVEL, level);
+                    intent2.putExtra(GamePlayActivity2.VEGETABLE, veg);
+                    intent2.putExtra(GamePlayActivity2.STATE, gameState);
+                    intent2.putExtra(GamePlayActivity2.VEG_LIST, vegetables);
+                    intent2.putExtra(GamePlayActivity2.SCORE, score);
+                    startActivity(intent2);
+                }
             }
         },SPLASH_SCREEN_INT);
     }

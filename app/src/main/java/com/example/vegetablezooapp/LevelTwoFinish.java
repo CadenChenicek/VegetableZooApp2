@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class LevelOneFinish extends AppCompatActivity {
+public class LevelTwoFinish extends AppCompatActivity {
 
     public static final String VEGETABLE = "veg";
     public static final String STATE = "game";
@@ -26,7 +26,7 @@ public class LevelOneFinish extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_one_finish);
+        setContentView(R.layout.activity_level_two_finish);
 
         Intent intent = getIntent();
         final String veg;
@@ -50,12 +50,7 @@ public class LevelOneFinish extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
 
             public void run(){
-                Intent intent2 = new Intent(LevelOneFinish.this, GamePlayActivity2.class);
-                intent2.putExtra(LEVEL, level);
-                intent2.putExtra(GamePlayActivity2.VEGETABLE, veg);
-                intent2.putExtra(GamePlayActivity2.STATE, gameState);
-                intent2.putExtra(GamePlayActivity2.VEG_LIST, vegetables);
-                intent2.putExtra(GamePlayActivity2.SCORE, score);
+                Intent intent2 = new Intent(LevelTwoFinish.this, MainMenu.class);
                 startActivity(intent2);
             }
         },SPLASH_SCREEN_INT);

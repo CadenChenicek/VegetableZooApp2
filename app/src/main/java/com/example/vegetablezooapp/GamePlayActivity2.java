@@ -58,11 +58,11 @@ public class GamePlayActivity2 extends AppCompatActivity {
         gameState = intent.getIntExtra(STATE,0);
         vegetables = intent.getStringArrayListExtra(VEG_LIST);
         score = intent.getIntExtra(SCORE, 0);
+        level = intent.getIntExtra(LEVEL, 0);
 
         if (gameState == 1){
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_game_play2);
-
 
             char1 = (TextView) findViewById(R.id.letter1);
             char2 = (TextView) findViewById(R.id.letter2);
@@ -109,21 +109,29 @@ public class GamePlayActivity2 extends AppCompatActivity {
             char2 = (TextView) findViewById(R.id.letter2);
             char3 = (TextView) findViewById(R.id.letter3);
             char4 = (TextView) findViewById(R.id.letter4);
+            char5 = (TextView) findViewById(R.id.letter5);
+            char6 = (TextView) findViewById(R.id.letter6);
 
             space1 = (TextView) findViewById(R.id.letterSpace1);
             space2 = (TextView) findViewById(R.id.letterSpace2);
             space3 = (TextView) findViewById(R.id.letterSpace3);
             space4 = (TextView) findViewById(R.id.letterSpace4);
+            space5 = (TextView) findViewById(R.id.letterSpace5);
+            space6 = (TextView) findViewById(R.id.letterSpace6);
 
             char1.setOnLongClickListener(longclickListener);
             char2.setOnLongClickListener(longclickListener);
             char3.setOnLongClickListener(longclickListener);
             char4.setOnLongClickListener(longclickListener);
+            char5.setOnLongClickListener(longclickListener);
+            char6.setOnLongClickListener(longclickListener);
 
             space1.setOnDragListener(dragListener1);
             space2.setOnDragListener(dragListener2);
             space3.setOnDragListener(dragListener3);
             space4.setOnDragListener(dragListener4);
+            space5.setOnDragListener(dragListener5);
+            space6.setOnDragListener(dragListener6);
 
             scoreCount = (TextView) findViewById(R.id.scoreText);
             scoreCount.setText("" + score);
@@ -141,21 +149,29 @@ public class GamePlayActivity2 extends AppCompatActivity {
             char2 = (TextView) findViewById(R.id.letter2);
             char3 = (TextView) findViewById(R.id.letter3);
             char4 = (TextView) findViewById(R.id.letter4);
+            char5 = (TextView) findViewById(R.id.letter5);
+            char6 = (TextView) findViewById(R.id.letter6);
 
             space1 = (TextView) findViewById(R.id.letterSpace1);
             space2 = (TextView) findViewById(R.id.letterSpace2);
             space3 = (TextView) findViewById(R.id.letterSpace3);
             space4 = (TextView) findViewById(R.id.letterSpace4);
+            space5 = (TextView) findViewById(R.id.letterSpace5);
+            space6 = (TextView) findViewById(R.id.letterSpace6);
 
             char1.setOnLongClickListener(longclickListener);
             char2.setOnLongClickListener(longclickListener);
             char3.setOnLongClickListener(longclickListener);
             char4.setOnLongClickListener(longclickListener);
+            char5.setOnLongClickListener(longclickListener);
+            char6.setOnLongClickListener(longclickListener);
 
             space1.setOnDragListener(dragListener1);
             space2.setOnDragListener(dragListener2);
             space3.setOnDragListener(dragListener3);
             space4.setOnDragListener(dragListener4);
+            space5.setOnDragListener(dragListener5);
+            space6.setOnDragListener(dragListener6);
 
             scoreCount = (TextView) findViewById(R.id.scoreText);
             scoreCount.setText("" + score);
@@ -207,7 +223,8 @@ public class GamePlayActivity2 extends AppCompatActivity {
         vegetables.remove(random);
 
         if (letter1.toString().equals(space1.getText()) && letter2.toString().equals(space2.getText()) &&
-                letter3.toString().equals(space3.getText()) && letter4.toString().equals(space4.getText())){
+                letter3.toString().equals(space3.getText()) && letter4.toString().equals(space4.getText()) &&
+                letter5.toString().equals(space5.getText()) && letter6.toString().equals(space6.getText())){
 
             score += timeLeftInMillis/1000;
 
@@ -216,8 +233,9 @@ public class GamePlayActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(GamePlayActivity2.this, correctSplash.class);
                 intent.putExtra(correctSplash.VEGETABLE, veg);
                 intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(correctSplash.VEG_LIST, vegetables);
+                intent.putExtra(correctSplash.SCORE, score);
+                intent.putExtra(correctSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
@@ -226,17 +244,19 @@ public class GamePlayActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(GamePlayActivity2.this, correctSplash.class);
                 intent.putExtra(correctSplash.VEGETABLE, veg);
                 intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(correctSplash.VEG_LIST, vegetables);
+                intent.putExtra(correctSplash.SCORE, score);
+                intent.putExtra(correctSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
             else{
-                Intent intent = new Intent(GamePlayActivity2.this, LevelOneFinish.class);
-                intent.putExtra(LevelOneFinish.VEGETABLE, veg);
-                intent.putExtra(LevelOneFinish.STATE, gameState);
-                intent.putExtra(LevelOneFinish.VEG_LIST, vegetables);
-                intent.putExtra(LevelOneFinish.SCORE, score);
+                Intent intent = new Intent(GamePlayActivity2.this, LevelTwoFinish.class);
+                intent.putExtra(LevelTwoFinish.VEGETABLE, veg);
+                intent.putExtra(LevelTwoFinish.STATE, gameState);
+                intent.putExtra(LevelTwoFinish.VEG_LIST, vegetables);
+                intent.putExtra(LevelTwoFinish.SCORE, score);
+                intent.putExtra(LevelTwoFinish.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
@@ -245,29 +265,32 @@ public class GamePlayActivity2 extends AppCompatActivity {
             if (gameState == 1){
                 gameState = 2;
                 Intent intent = new Intent(GamePlayActivity2.this, incorrectSplash.class);
-                intent.putExtra(correctSplash.VEGETABLE, veg);
-                intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(incorrectSplash.VEGETABLE, veg);
+                intent.putExtra(incorrectSplash.STATE, gameState);
+                intent.putExtra(incorrectSplash.VEG_LIST, vegetables);
+                intent.putExtra(incorrectSplash.SCORE, score);
+                intent.putExtra(incorrectSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
             else if (gameState == 2){
                 gameState = 3;
                 Intent intent = new Intent(GamePlayActivity2.this, incorrectSplash.class);
-                intent.putExtra(correctSplash.VEGETABLE, veg);
-                intent.putExtra(correctSplash.STATE, gameState);
-                intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
-                intent.putExtra(GamePlayActivity.SCORE, score);
+                intent.putExtra(incorrectSplash.VEGETABLE, veg);
+                intent.putExtra(incorrectSplash.STATE, gameState);
+                intent.putExtra(incorrectSplash.VEG_LIST, vegetables);
+                intent.putExtra(incorrectSplash.SCORE, score);
+                intent.putExtra(incorrectSplash.LEVEL, level);
                 startActivity(intent);
                 finish();
             }
             else{
-                Intent intent = new Intent(GamePlayActivity2.this, LevelOneFinish.class);
-                intent.putExtra(LevelOneFinish.VEGETABLE, veg);
-                intent.putExtra(LevelOneFinish.STATE, gameState);
-                intent.putExtra(LevelOneFinish.VEG_LIST, vegetables);
-                intent.putExtra(LevelOneFinish.SCORE, score);
+                Intent intent = new Intent(GamePlayActivity2.this, LevelTwoFinish.class);
+                intent.putExtra(LevelTwoFinish.VEGETABLE, veg);
+                intent.putExtra(LevelTwoFinish.STATE, gameState);
+                intent.putExtra(LevelTwoFinish.VEG_LIST, vegetables);
+                intent.putExtra(LevelTwoFinish.SCORE, score);
+                intent.putExtra(LevelTwoFinish.LEVEL, level);
                 startActivity(intent);
                 finish();
             }

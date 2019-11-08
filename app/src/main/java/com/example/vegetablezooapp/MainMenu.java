@@ -15,6 +15,7 @@ public class MainMenu extends AppCompatActivity {
     public static final ArrayList<String> vegetables = new ArrayList<String>();
     private static int gameState = 1;
     private static int score = 0;
+    private static int level = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +28,6 @@ public class MainMenu extends AppCompatActivity {
         vegetables.add("CORN");
         vegetables.add("PEAS");
 
-
-
         int random = new Random().nextInt(vegetables.size() - 1);
         veg = vegetables.get(random);
         vegetables.remove(random);
@@ -40,6 +39,7 @@ public class MainMenu extends AppCompatActivity {
         intent.putExtra(GamePlayActivity.STATE, gameState);
         intent.putExtra(GamePlayActivity.VEG_LIST, vegetables);
         intent.putExtra(GamePlayActivity.SCORE, score);
+        intent.putExtra(GamePlayActivity.LEVEL, level);
         startActivity(intent);
     }
 
